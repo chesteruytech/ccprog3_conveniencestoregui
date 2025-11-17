@@ -2,11 +2,9 @@ package com.dlsu.ccs.ccprog3.constogui.ccprog3_conveniencestoregui;
 
 public class ProductController {
     private Product model;
-    private ProductView view;
 
     public ProductController(Product model, ProductView view){
         this.model = model;
-        this.view = view;
     }
 
     public String getProductName() {
@@ -38,7 +36,7 @@ public class ProductController {
     }
 
     public void updateProductView() {
-        view.showProductInformation(model.getName(),  model.getCategory(), model.getBrand(), model.getVariant(),
+        ProductView.showProductInformation(model.getName(), model.getCategory(), model.getBrand(), model.getVariant(),
                 model.getQuantity(), model.getPrice());
     }
 }

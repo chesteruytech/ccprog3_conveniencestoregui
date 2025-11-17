@@ -8,4 +8,36 @@ public class CustomerController {
         this.model = model;
         this.view = view;
     }
+
+    public String getCustomerName(){
+        return model.getName();
+    }
+
+    public int getCustomerAge(){
+        return model.getAge();
+    }
+
+    public int getCustomerMembership(){
+        return model.getMembership();
+    }
+
+    public float getCustomerMoney(){
+        return model.getMoney();
+    }
+
+    public void setCustomerName(String name){
+        model.setName(name);
+    }
+
+    public void setCustomerAge(int age){
+        model.setAge(age);
+    }
+
+    public void setMembership(int membership){
+        model.setMembership(membership);
+    }
+
+    public void updateCustomerView(){
+        view.showEmployeeDetails(model.getName(), model.getAge(), model.getMembership(), model.getMoney());
+    }
 }

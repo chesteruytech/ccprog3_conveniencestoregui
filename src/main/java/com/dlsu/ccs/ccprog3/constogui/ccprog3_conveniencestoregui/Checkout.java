@@ -23,7 +23,7 @@ public class Checkout {
         }
     }
 
-    public float CalculateTotal(){
+    public float calculateTotal(){
         for(int i = 0; i < customer.getAllProducts().size(); i++){
            total_cost += customer.getAllProducts().get(i).getPrice() * customer.getAllProducts().get(i).getQuantity();
         }
@@ -37,8 +37,8 @@ public class Checkout {
         System.out.print("Enter amount given: Php");
         amount_given = iLoveCash.nextFloat();
 
-        if(amount_given >= this.CalculateTotal())
-            return amount_given - this.CalculateTotal();
+        if(amount_given >= this.calculateTotal())
+            return amount_given - this.calculateTotal();
 
         return 0;
     }

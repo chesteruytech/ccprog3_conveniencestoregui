@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Checkout {
     private float total_cost;
+    private float amount_given;
     private Customer customer;
 
     public void setCustomer(Customer customer){
@@ -34,7 +35,7 @@ public class Checkout {
         Scanner iLoveCash = new Scanner(System.in);
 
         System.out.print("Enter amount given: Php");
-        float amount_given = iLoveCash.nextFloat();
+        amount_given = iLoveCash.nextFloat();
 
         if(amount_given >= this.CalculateTotal())
             return amount_given - this.CalculateTotal();
@@ -43,6 +44,6 @@ public class Checkout {
     }
 
     public Receipt printReceipt(){
-        return new Receipt();
+//        return new Receipt(customer.getAllProducts(), CalculateTotal(), amount_given, giveChange());
     }
 }

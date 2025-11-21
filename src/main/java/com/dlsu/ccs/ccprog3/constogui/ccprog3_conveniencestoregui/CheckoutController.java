@@ -8,4 +8,8 @@ public class CheckoutController {
         this.model = model;
         this.view = view;
     }
+
+    public void setCheckoutCustomer(Customer customer){
+        model.setCustomer(customer);
+    }
 }

@@ -4,11 +4,12 @@ import java.util.ArrayList;
 
 public class Customer {
     private String name;
-    private int age, membership;
-    private float money;
+    private int age;
+    private boolean membership;
+    private final float money;
     private ArrayList<Product> productsGot;
 
-    public Customer(String name, int age, int membership, float money){
+    public Customer(String name, int age, boolean membership, float money){
         this.name = name;
         this.age = age;
         this.membership = membership;
@@ -31,7 +32,7 @@ public class Customer {
         return age;
     }
 
-    public int getMembership(){
+    public boolean getMembership(){
         return membership;
     }
 
@@ -47,7 +48,7 @@ public class Customer {
         this.age = age;
     }
 
-    public void setMembership(int membership){
+    public void setMembership(boolean membership){
         this.membership = membership;
     }
 }

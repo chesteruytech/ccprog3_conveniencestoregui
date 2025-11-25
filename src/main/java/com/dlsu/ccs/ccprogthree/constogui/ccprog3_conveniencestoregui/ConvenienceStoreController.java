@@ -18,7 +18,7 @@ public class ConvenienceStoreController {
     }
 
     public void employee(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("EmployeeGUI.fxml"));
+        root = FXMLLoader.load(getClass().getResource("EmployeeLoginGUI.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(new Scene (root));
         stage.show();

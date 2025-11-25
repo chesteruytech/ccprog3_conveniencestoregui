@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dlsu.ccs.ccprogthree.constogui.ccprog3_conveniencestoregui.EmployeeLoginController">
+    <TextField fx:id="employeeNameTextField" layoutX="194.0" layoutY="187.0" />
+    <Label layoutX="194.0" layoutY="169.0" text="Employee Name">
+        <font>
+          <Font name="Arial" size="12.0" />
+        </font>
+    </Label>
+    <Button fx:id="employeeSignIn" layoutX="353.0" layoutY="187.0" mnemonicParsing="false" onAction="#validateEmployee" text="Sign In" />
+    <Label layoutX="14.0" layoutY="370.0" text="U&amp;P Convenience Store v1.0">
+        <font>
+          <Font size="10.0" />
+        </font>
+    </Label>
+    <ButtonBar layoutY="358.0" prefHeight="40.0" prefWidth="600.0">
+      <buttons>
+          <Button mnemonicParsing="false" text="Back" />
+          <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+      </buttons>
+    </ButtonBar>
+    <Label layoutX="166.0" layoutY="227.0" text="YOU HAVE BEEN WARNED." textFill="RED">
+        <font>
+          <Font name="Arial Bold" size="20.0" />
+        </font>
+    </Label>
+    <Label layoutX="156.0" layoutY="138.0" text="AUTHORIZED ACCESS ONLY." textFill="RED">
+        <font>
+          <Font name="Arial Bold" size="20.0" />
+        </font>
+    </Label>
+</AnchorPane>

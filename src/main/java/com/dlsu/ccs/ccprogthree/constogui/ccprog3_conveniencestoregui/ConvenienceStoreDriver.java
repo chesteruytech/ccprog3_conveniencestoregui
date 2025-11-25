@@ -1,24 +1,20 @@
 package com.dlsu.ccs.ccprogthree.constogui.ccprog3_conveniencestoregui;
 
-import javafx.application.Application;
-import javafx.event.*;
+import javafx.application.*;
 import javafx.fxml.*;
 import javafx.scene.*;
 import javafx.stage.*;
 
-import java.awt.*;
-
 public class ConvenienceStoreDriver extends Application {
-    Button button;
-
-    public static void main(String[] args) {
-        launch(args);
-    }
-
     @Override
     public void start(Stage primaryStage) throws Exception {
-        primaryStage.setTitle("Convenience Store GUI");
+        Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
+        primaryStage.setTitle("U&P's Convenience Store");
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
+    }
 
-        button = new Button("Click Me");
+    static void main(String[] args) {
+        launch(args);
     }
 }

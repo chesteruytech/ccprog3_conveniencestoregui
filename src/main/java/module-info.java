@@ -1,8 +1,9 @@
-module com.dlsu.ccs.ccprog3.constogui.ccprog3_conveniencestoregui {
+module com.dlsu.ccs.ccprogthree.constogui.ccprog3_conveniencestoregui {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.desktop;
 
 
-    opens com.dlsu.ccs.ccprog3.constogui.ccprog3_conveniencestoregui to javafx.fxml;
-    exports com.dlsu.ccs.ccprog3.constogui.ccprog3_conveniencestoregui;
+    opens com.dlsu.ccs.ccprogthree.constogui.ccprog3_conveniencestoregui to javafx.fxml;
+    exports com.dlsu.ccs.ccprogthree.constogui.ccprog3_conveniencestoregui;
 }

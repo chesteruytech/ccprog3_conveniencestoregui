@@ -1,4 +1,4 @@
-package com.dlsu.ccs.ccprog3.constogui.ccprog3_conveniencestoregui;
+package com.dlsu.ccs.ccprogthree.constogui.ccprog3_conveniencestoregui;
 
 public class ReceiptView {
     public void issueReceipt(float rTotal_cost, float rReceived_amount, float rChange, float rTimestamp){

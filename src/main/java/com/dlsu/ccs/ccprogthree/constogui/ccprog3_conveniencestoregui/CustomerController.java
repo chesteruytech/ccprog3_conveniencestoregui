@@ -1,4 +1,4 @@
-package com.dlsu.ccs.ccprog3.constogui.ccprog3_conveniencestoregui;
+package com.dlsu.ccs.ccprogthree.constogui.ccprog3_conveniencestoregui;
 
 public class CustomerController {
     private Customer model;
@@ -17,7 +17,7 @@ public class CustomerController {
         return model.getAge();
     }
 
-    public int getCustomerMembership(){
+    public boolean getCustomerMembership(){
         return model.getMembership();
     }
 
@@ -33,7 +33,7 @@ public class CustomerController {
         model.setAge(age);
     }
 
-    public void setMembership(int membership){
+    public void setMembership(boolean membership){
         model.setMembership(membership);
     }
 

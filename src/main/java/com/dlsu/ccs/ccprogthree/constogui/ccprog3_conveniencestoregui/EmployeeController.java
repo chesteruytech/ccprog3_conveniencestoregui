@@ -1,4 +1,4 @@
-package com.dlsu.ccs.ccprog3.constogui.ccprog3_conveniencestoregui;
+package com.dlsu.ccs.ccprogthree.constogui.ccprog3_conveniencestoregui;
 
 import java.util.ArrayList;
 

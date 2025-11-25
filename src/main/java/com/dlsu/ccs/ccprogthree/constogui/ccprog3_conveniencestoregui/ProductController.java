@@ -55,12 +55,12 @@ public class ProductController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        name.setCellValueFactory(new PropertyValueFactory<Product, String>("Name"));
-        category.setCellValueFactory(new PropertyValueFactory<Product, String>("Category"));
-        brand.setCellValueFactory(new PropertyValueFactory<Product, String>("Brand"));
-        variant.setCellValueFactory(new PropertyValueFactory<Product, String>("Variant"));
-        quantity.setCellValueFactory(new PropertyValueFactory<Product, Integer>("Stock"));
-        price.setCellValueFactory(new PropertyValueFactory<Product, Float>("Price"));
+        name.setCellValueFactory(new PropertyValueFactory<>("Name"));
+        category.setCellValueFactory(new PropertyValueFactory<>("Category"));
+        brand.setCellValueFactory(new PropertyValueFactory<>("Brand"));
+        variant.setCellValueFactory(new PropertyValueFactory<>("Variant"));
+        quantity.setCellValueFactory(new PropertyValueFactory<>("Stock"));
+        price.setCellValueFactory(new PropertyValueFactory<>("Price"));
 
         editableProductTable.setItems(productList);
     }

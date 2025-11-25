@@ -23,7 +23,7 @@
     </Label>
     <ButtonBar layoutY="358.0" prefHeight="40.0" prefWidth="600.0">
       <buttons>
-          <Button mnemonicParsing="false" text="Back" />
+          <Button fx:id="backButton" mnemonicParsing="false" onAction="#backToMain" text="Back" />
           <Text strokeType="OUTSIDE" strokeWidth="0.0" />
       </buttons>
     </ButtonBar>

@@ -2,7 +2,7 @@ package com.dlsu.ccs.ccprogthree.constogui.ccprog3_conveniencestoregui;
 
 import java.io.IOException;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
+import javafx.fxml.*;
 import javafx.scene.*;
 import javafx.stage.Stage;
 
@@ -22,5 +22,9 @@ public class ConvenienceStoreController {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(new Scene (root));
         stage.show();
+    }
+
+    public void exit(){
+        stage.close();
     }
 }

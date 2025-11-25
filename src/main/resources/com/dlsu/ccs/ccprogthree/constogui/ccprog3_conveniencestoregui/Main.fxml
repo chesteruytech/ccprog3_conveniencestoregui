@@ -7,12 +7,12 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dlsu.ccs.ccprogthree.constogui.ccprog3_conveniencestoregui.ConvenienceStoreController">
+<AnchorPane fx:id="mainPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dlsu.ccs.ccprogthree.constogui.ccprog3_conveniencestoregui.ConvenienceStoreController">
     <Button layoutX="53.0" layoutY="99.0" mnemonicParsing="false" onAction="#customer" prefHeight="200.0" prefWidth="200.0" text="Customer" />
     <Button layoutX="347.0" layoutY="100.0" mnemonicParsing="false" onAction="#employee" prefHeight="200.0" prefWidth="200.0" text="Employee" />
    <ButtonBar layoutY="360.0" prefHeight="40.0" prefWidth="600.0">
      <buttons>
-       <Button alignment="CENTER" lineSpacing="1.0" mnemonicParsing="false" text="Exit" />
+       <Button fx:id="exitButton" alignment="CENTER" lineSpacing="1.0" mnemonicParsing="false" onAction="#exit" text="Exit" />
          <Text strokeType="OUTSIDE" strokeWidth="0.0" />
      </buttons>
    </ButtonBar>

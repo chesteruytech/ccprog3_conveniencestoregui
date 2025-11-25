@@ -42,12 +42,12 @@
          <Font size="10.0" />
       </font>
    </Label>
-   <TableView layoutX="14.0" layoutY="60.0" prefHeight="280.0" prefWidth="580.0">
+   <TableView fx:id="editableProductTable" layoutX="14.0" layoutY="60.0" prefHeight="280.0" prefWidth="580.0">
      <columns>
-       <TableColumn prefWidth="165.99996948242188" text="Name" />
-       <TableColumn prefWidth="124.0" text="Category" />
-         <TableColumn prefWidth="63.3333740234375" text="Brand" />
-         <TableColumn prefWidth="115.33331298828125" text="Variant" />
+       <TableColumn prefWidth="213.33328247070312" text="Name" />
+       <TableColumn prefWidth="83.33331298828125" text="Category" />
+         <TableColumn prefWidth="70.6666259765625" text="Brand" />
+         <TableColumn prefWidth="102.66668701171875" text="Variant" />
          <TableColumn prefWidth="38.0" text="Stock" />
          <TableColumn prefWidth="76.0" text="Price" />
      </columns>

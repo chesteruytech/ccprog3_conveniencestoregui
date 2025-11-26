@@ -19,11 +19,15 @@
          </font>
       </Label>
    <MenuBar layoutY="1.0" prefHeight="25.0" prefWidth="600.0">
-       <Menu mnemonicParsing="false" text="Generate">
-           <MenuItem mnemonicParsing="false" text="Daily" />
-               <MenuItem mnemonicParsing="false" text="Weekly" />
-               <MenuItem mnemonicParsing="false" text="Monthly" />
-               <MenuItem mnemonicParsing="false" text="Yearly" />
+      <Menu mnemonicParsing="false" text="HR">
+            <MenuItem mnemonicParsing="false" text="Add Employee" />
+            <MenuItem mnemonicParsing="false" text="Delete Employee" />
+      </Menu>
+       <Menu mnemonicParsing="false" text="Report">
+           <MenuItem mnemonicParsing="false" text="Generate Daily" />
+               <MenuItem mnemonicParsing="false" text="Generate Weekly" />
+               <MenuItem mnemonicParsing="false" text="Generate Monthly" />
+               <MenuItem mnemonicParsing="false" text="Generate Yearly" />
        </Menu>
        <Menu mnemonicParsing="false" text="Help">
            <MenuItem mnemonicParsing="false" text="About" />

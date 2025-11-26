@@ -1,11 +1,10 @@
 package com.dlsu.ccs.ccprogthree.constogui.ccprog3_conveniencestoregui;
 
 import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
+import java.util.*;
+import javafx.collections.*;
+import javafx.event.ActionEvent;
+import javafx.fxml.*;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
@@ -52,6 +51,69 @@ public class ProductController implements Initializable {
             new Product("DecolgenNonDrowsy", "Medicine", "Decolgen", "NonDrowsyTablet", 10, 13.15f),
             new Product("Trimox", "Medicine", "Trimox", "Tablet", 10, 28.35f)
     );
+
+    public void modifyNameEvent(TableColumn.CellEditEvent modifyCell) {
+        Product productSelected = editableProductTable.getSelectionModel().getSelectedItem();
+        productSelected.setName(modifyCell.getNewValue().toString());
+    }
+
+    public void modifyCategoryEvent(TableColumn.CellEditEvent modifyCell) {
+        Product productSelected = editableProductTable.getSelectionModel().getSelectedItem();
+        productSelected.setCategory(modifyCell.getNewValue().toString());
+    }
+
+    public void modifyBrandEvent(TableColumn.CellEditEvent modifyCell) {
+        Product productSelected = editableProductTable.getSelectionModel().getSelectedItem();
+        productSelected.setBrand(modifyCell.getNewValue().toString());
+    }
+
+    public void modifyVariantEvent(TableColumn.CellEditEvent modifyCell) {
+        Product productSelected = editableProductTable.getSelectionModel().getSelectedItem();
+        productSelected.setVariant(modifyCell.getNewValue().toString());
+    }
+
+    public void modifyStockEvent(TableColumn.CellEditEvent modifyCell) {
+        Product productSelected = editableProductTable.getSelectionModel().getSelectedItem();
+        productSelected.setQuantity(modifyCell.getNewValue().hashCode());
+    }
+
+    public void modifyPriceEvent(TableColumn.CellEditEvent modifyCell) {
+        Product productSelected = editableProductTable.getSelectionModel().getSelectedItem();
+        productSelected.setPrice(modifyCell.getNewValue().hashCode());
+    }
+
+    public void modify(ActionEvent event) {
+        String[] options = {"Name", "Category", "Brand", "Variant", "Stock", "Price"};
+        String defaultValue = options[0];
+
+        ChoiceDialog<String> dialog = new ChoiceDialog<>(defaultValue, options);
+        dialog.setTitle("Modify Product");
+        dialog.setHeaderText("Value:");
+        Optional<String> result = dialog.showAndWait();
+        result.ifPresent((item)->{
+
+//            ProductController controller = new ProductController();
+//
+//            if(item.equals("Name")){
+//                controller.modifyNameEvent();
+//            } else if (item.equals("Category")) {
+//
+//            } else if (item.equals("Brand")) {
+//
+//            } else if (item.equals("Variant")) {
+//
+//            } else if (item.equals("Stock")) {
+//
+//            } else if (item.equals("Price")) {
+//
+//            }
+        });
+    }
+
+    public void remove(ActionEvent event) {
+        int selectedProduct = editableProductTable.getSelectionModel().getSelectedIndex();
+        editableProductTable.getItems().remove(selectedProduct);
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

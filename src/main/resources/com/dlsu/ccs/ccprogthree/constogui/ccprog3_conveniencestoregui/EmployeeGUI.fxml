@@ -31,9 +31,9 @@
    </MenuBar>
    <ButtonBar layoutY="361.0" prefHeight="40.0" prefWidth="600.0">
      <buttons>
-       <Button mnemonicParsing="false" text="Add" />
-         <Button mnemonicParsing="false" text="Modify" />
-         <Button mnemonicParsing="false" text="Delete" />
+       <Button fx:id="addButton" mnemonicParsing="false" text="Add" />
+         <Button fx:id="modifyButton" mnemonicParsing="false" text="Modify" />
+         <Button fx:id="deleteButton" mnemonicParsing="false" text="Delete" />
          <Text strokeType="OUTSIDE" strokeWidth="0.0" />
      </buttons>
    </ButtonBar>

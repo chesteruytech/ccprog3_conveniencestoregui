@@ -29,6 +29,10 @@ public class Product {
         return category;
     }
 
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
     public String getBrand() {
         return brand;
     }

@@ -7,11 +7,11 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dlsu.ccs.ccprogthree.constogui.ccprog3_conveniencestoregui.ShelfController">
-    <Button layoutX="138.0" layoutY="150.0" mnemonicParsing="false" onAction="#beverages" prefHeight="100.0" prefWidth="100.0" text="Beverages" />
-    <Button layoutX="363.0" layoutY="150.0" mnemonicParsing="false" onAction="#cleaningProducts" prefHeight="100.0" prefWidth="100.0" text="CleaningProducts" />
-    <Button layoutX="476.0" layoutY="150.0" mnemonicParsing="false" onAction="#medicine" prefHeight="100.0" prefWidth="100.0" text="Medicine" />
-    <Button layoutX="27.0" layoutY="150.0" mnemonicParsing="false" onAction="#food" prefHeight="100.0" prefWidth="100.0" text="Food" />
-    <Button layoutX="250.0" layoutY="150.0" mnemonicParsing="false" onAction="#toiletries" prefHeight="100.0" prefWidth="100.0" text="Toiletries" />
+    <Button fx:id="beveragesButton" layoutX="138.0" layoutY="150.0" mnemonicParsing="false" onAction="#beverages" prefHeight="100.0" prefWidth="100.0" text="Beverages" />
+    <Button fx:id="cleaningProductsButton" layoutX="363.0" layoutY="150.0" mnemonicParsing="false" onAction="#cleaningProducts" prefHeight="100.0" prefWidth="100.0" text="CleaningProducts" />
+    <Button fx:id="medicineButton" layoutX="476.0" layoutY="150.0" mnemonicParsing="false" onAction="#medicine" prefHeight="100.0" prefWidth="100.0" text="Medicine" />
+    <Button fx:id="foodButton" layoutX="27.0" layoutY="150.0" mnemonicParsing="false" onAction="#food" prefHeight="100.0" prefWidth="100.0" text="Food" />
+    <Button fx:id="toiletriesButton" layoutX="250.0" layoutY="150.0" mnemonicParsing="false" onAction="#toiletries" prefHeight="100.0" prefWidth="100.0" text="Toiletries" />
     <Text layoutX="250.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select a Shelf">
         <font>
           <Font name="Arial" size="20.0" />

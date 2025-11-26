@@ -1,14 +1,25 @@
 package com.dlsu.ccs.ccprogthree.constogui.ccprog3_conveniencestoregui;
 
 import java.io.IOException;
+import java.util.function.Predicate;
+
+import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.fxml.*;
 import javafx.scene.*;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 public class ShelfController {
     private Parent root;
     private Stage stage;
+    private final ManagementController tableData = new ManagementController();
+    private FilteredList<Product> filteredProducts;
+    @FXML Button foodButton;
+    @FXML Button beveragesButton;
+    @FXML Button toiletriesButton;
+    @FXML Button cleaningProductsButton;
+    @FXML Button medicineButton;
 
     // Customer Button; open to everyone
     public void food(ActionEvent event) throws IOException {
@@ -55,5 +66,34 @@ public class ShelfController {
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(new Scene (root));
         stage.show();
+    }
+
+    private void filterByCategory(String category) {
+        Predicate<Product> filter = product -> product.getCategory().equals(category);
+        filteredProducts.setPredicate(filter);
+    }
+
+    public void initialize(){
+        filteredProducts = new FilteredList<>(tableData.getProductList(), p -> true);
+
+        foodButton.setOnAction(event -> {
+            filterByCategory("Food");
+        });
+
+        beveragesButton.setOnAction(event -> {
+            filterByCategory("Beverages");
+        });
+
+        toiletriesButton.setOnAction(event -> {
+            filterByCategory("Toiletries");
+        });
+
+        cleaningProductsButton.setOnAction(event -> {
+            filterByCategory("CleaningProducts");
+        });
+
+        medicineButton.setOnAction(event -> {
+            filterByCategory("Medicine");
+        });
     }
 }

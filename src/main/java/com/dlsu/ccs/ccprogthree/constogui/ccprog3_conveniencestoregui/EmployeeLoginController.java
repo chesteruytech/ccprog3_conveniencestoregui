@@ -21,7 +21,7 @@ public class EmployeeLoginController {
         Parent root = loader.load();
 
         EmployeeController controller = loader.getController();
-        controller.displayEmployeeName(employeeName);
+        controller.displayName(employeeName);
 
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));

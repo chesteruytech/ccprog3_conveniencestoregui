@@ -108,61 +108,113 @@ public class ProductController implements Initializable {
         editableProductTable.setItems(products);
     }
 
-    public void modifyNameEvent(TableColumn.CellEditEvent modifyCell) {
+    public void modifyNameEvent() {
         Product productSelected = editableProductTable.getSelectionModel().getSelectedItem();
-        productSelected.setName(modifyCell.getNewValue().toString());
+
+        TextInputDialog modifyNameDialog = new TextInputDialog();
+        modifyNameDialog.setTitle("Change Name");
+        modifyNameDialog.setHeaderText("Please enter new product name you would like to change");
+        modifyNameDialog.setContentText("Name:");
+
+        Optional<String> nameResult = modifyNameDialog.showAndWait();
+
+        nameResult.ifPresent(productSelected::setName);
     }
 
-    public void modifyCategoryEvent(TableColumn.CellEditEvent modifyCell) {
+    public void modifyCategoryEvent() {
         Product productSelected = editableProductTable.getSelectionModel().getSelectedItem();
-        productSelected.setCategory(modifyCell.getNewValue().toString());
+
+        TextInputDialog modifyCategoryDialog = new TextInputDialog();
+        modifyCategoryDialog.setTitle("Change Category");
+        modifyCategoryDialog.setHeaderText("Please enter new product category you would like to change");
+        modifyCategoryDialog.setContentText("Category:");
+
+        Optional<String> categoryResult = modifyCategoryDialog.showAndWait();
+
+        categoryResult.ifPresent(productSelected::setCategory);
     }
 
-    public void modifyBrandEvent(TableColumn.CellEditEvent modifyCell) {
+    public void modifyBrandEvent() {
         Product productSelected = editableProductTable.getSelectionModel().getSelectedItem();
-        productSelected.setBrand(modifyCell.getNewValue().toString());
+
+        TextInputDialog modifyBrandDialog = new TextInputDialog();
+        modifyBrandDialog.setTitle("Change Brand");
+        modifyBrandDialog.setHeaderText("Please enter new product brand you would like to change");
+        modifyBrandDialog.setContentText("Brand:");
+
+        Optional<String> brandResult = modifyBrandDialog.showAndWait();
+
+        brandResult.ifPresent(productSelected::setBrand);
     }
 
-    public void modifyVariantEvent(TableColumn.CellEditEvent modifyCell) {
+    public void modifyVariantEvent() {
         Product productSelected = editableProductTable.getSelectionModel().getSelectedItem();
-        productSelected.setVariant(modifyCell.getNewValue().toString());
+
+        TextInputDialog modifyVariantDialog = new TextInputDialog();
+        modifyVariantDialog.setTitle("Change Variant");
+        modifyVariantDialog.setHeaderText("Please enter new product variant you would like to change");
+        modifyVariantDialog.setContentText("Variant:");
+
+        Optional<String> variantResult = modifyVariantDialog.showAndWait();
+
+        variantResult.ifPresent(productSelected::setVariant);
     }
 
-    public void modifyStockEvent(TableColumn.CellEditEvent modifyCell) {
+    public void modifyStockEvent() {
         Product productSelected = editableProductTable.getSelectionModel().getSelectedItem();
-        productSelected.setQuantity(modifyCell.getNewValue().hashCode());
+
+        TextInputDialog modifyQuantityDialog = new TextInputDialog();
+        modifyQuantityDialog.setTitle("Change Stock");
+        modifyQuantityDialog.setHeaderText("Update product stock you would like to change");
+        modifyQuantityDialog.setContentText("Stock:");
+
+        Optional<String> stockResult = modifyQuantityDialog.showAndWait();
+
+        stockResult.ifPresent(s -> productSelected.setQuantity(Integer.parseInt(s)));
     }
 
-    public void modifyPriceEvent(TableColumn.CellEditEvent modifyCell) {
+    public void modifyPriceEvent() {
         Product productSelected = editableProductTable.getSelectionModel().getSelectedItem();
-        productSelected.setPrice(modifyCell.getNewValue().hashCode());
+
+        TextInputDialog modifyPriceDialog = new TextInputDialog();
+        modifyPriceDialog.setTitle("Change Price");
+        modifyPriceDialog.setHeaderText("Update product price you would like to change");
+        modifyPriceDialog.setContentText("Price:");
+
+        Optional<String> priceResult = modifyPriceDialog.showAndWait();
+
+        priceResult.ifPresent(s -> productSelected.setPrice(Float.parseFloat(s)));
     }
 
     public void modify() {
-        String[] options = {"Name", "Category", "Brand", "Variant", "Stock", "Price"};
-        String defaultValue = options[0];
-
-        ChoiceDialog<String> dialog = new ChoiceDialog<>(defaultValue, options);
+        ChoiceDialog<String> dialog = new ChoiceDialog<>("Name", "Category", "Brand", "Variant", "Stock", "Price");
         dialog.setTitle("Modify Product");
-        dialog.setHeaderText("Value:");
+        dialog.setHeaderText("Select an Option to Modify a Value of the Product");
+        dialog.setContentText("Value:");
         Optional<String> result = dialog.showAndWait();
         result.ifPresent((item)->{
+            ProductController controller = new ProductController();
 
-//            ProductController controller = new ProductController();
-//
-//            if(item.equals("Name")){
-//                controller.modifyNameEvent();
-//            } else if (item.equals("Category")) {
-//
-//            } else if (item.equals("Brand")) {
-//
-//            } else if (item.equals("Variant")) {
-//
-//            } else if (item.equals("Stock")) {
-//
-//            } else if (item.equals("Price")) {
-//
-//            }
+            switch(item){
+                case "Name":
+                    controller.modifyNameEvent();
+                    break;
+                case "Category":
+                    controller.modifyCategoryEvent();
+                    break;
+                case "Brand":
+                    controller.modifyBrandEvent();
+                    break;
+                case "Variant":
+                    controller.modifyVariantEvent();
+                    break;
+                case "Stock":
+                    controller.modifyStockEvent();
+                    break;
+                case "Price":
+                    controller.modifyPriceEvent();
+                    break;
+            }
         });
     }
 

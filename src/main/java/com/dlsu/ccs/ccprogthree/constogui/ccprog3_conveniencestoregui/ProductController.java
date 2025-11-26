@@ -18,6 +18,7 @@ public class ProductController implements Initializable {
     @FXML private TableColumn<Product, Integer> quantity;
     @FXML private TableColumn<Product, Float> price;
 
+    // initializes the list of products
     ObservableList<Product> productList = FXCollections.observableArrayList(
             new Product("CLoud9Classic", "Food","Cloud9", "Classic", 10, 10.55f),
             new Product("VcutBarbeque", "Food", "Vcut", "Barbeque", 10, 18.70f),
@@ -46,6 +47,7 @@ public class ProductController implements Initializable {
             new Product("Trimox", "Medicine", "Trimox", "Tablet", 10, 28.35f)
     );
 
+    // Add button
     public void add(){
         Product product = new Product(name.getText(), category.getText(), brand.getText(), variant.getText(),
                 Integer.parseInt(quantity.getText()), Float.parseFloat(price.getText()));
@@ -179,6 +181,7 @@ public class ProductController implements Initializable {
         priceResult.ifPresent(s -> productSelected.setPrice(Float.parseFloat(s)));
     }
 
+    // Modify button and pick a choice where value should be modified
     public void modify() {
         ChoiceDialog<String> dialog = new ChoiceDialog<>("Name", "Category", "Brand", "Variant", "Stock", "Price");
         dialog.setTitle("Modify Product");
@@ -211,11 +214,13 @@ public class ProductController implements Initializable {
         });
     }
 
+    // Select an existing product then remove from the table
     public void remove() {
         int selectedProduct = editableProductTable.getSelectionModel().getSelectedIndex();
         editableProductTable.getItems().remove(selectedProduct);
     }
 
+    // Initializes the table data into the array
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         name.setCellValueFactory(new PropertyValueFactory<>("Name"));

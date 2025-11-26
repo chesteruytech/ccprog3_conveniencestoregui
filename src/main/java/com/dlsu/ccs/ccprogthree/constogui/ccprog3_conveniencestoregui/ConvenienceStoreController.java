@@ -27,7 +27,8 @@ public class ConvenienceStoreController {
     }
 
     // Closes the application
-    public void exit(){
+    public void exit(ActionEvent event) {
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.close();
     }
 }

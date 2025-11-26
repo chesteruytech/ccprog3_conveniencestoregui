@@ -25,6 +25,6 @@ public class EmployeeController {
     }
 
     public void displayName(String username){
-        employeeNameLabel.setText(username);
+        employeeNameLabel.setText("Welcome back to U&P, " + username + "!");
     }
 }

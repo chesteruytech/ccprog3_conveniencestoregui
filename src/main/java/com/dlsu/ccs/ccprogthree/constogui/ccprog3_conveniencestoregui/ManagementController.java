@@ -10,6 +10,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.GridPane;
 
 public class ManagementController implements Initializable {
+    /* Product class(es) */
     @FXML private TableView<Product> editableProductTable;
     @FXML private TableColumn<Product, String> nameColumn;
     @FXML private TableColumn<Product, String> categoryColumn;
@@ -255,6 +256,7 @@ public class ManagementController implements Initializable {
         editableProductTable.setItems(getProductList());
     }
 
+    /* Employee class(es) */
     public void displayName(String username){
         Label employeeNameLabel = new Label(username);
         employeeNameLabel.setText("Welcome back to U&P, " + username + "!");

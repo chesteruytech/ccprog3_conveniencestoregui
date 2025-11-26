@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dlsu.ccs.ccprogthree.constogui.ccprog3_conveniencestoregui.ProductController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dlsu.ccs.ccprogthree.constogui.ccprog3_conveniencestoregui.ManagementController">
       <Label layoutX="14.0" layoutY="37.0" text="Welcome back to U&amp;P, Employee!">
          <font>
             <Font name="Arial Bold" size="20.0" />
@@ -48,12 +48,12 @@
    </Label>
    <TableView fx:id="editableProductTable" layoutX="14.0" layoutY="65.0" prefHeight="275.0" prefWidth="580.0">
      <columns>
-       <TableColumn prefWidth="213.33328247070312" text="Name" />
-       <TableColumn prefWidth="83.33331298828125" text="Category" />
-         <TableColumn prefWidth="70.6666259765625" text="Brand" />
-         <TableColumn prefWidth="102.66668701171875" text="Variant" />
-         <TableColumn prefWidth="38.0" text="Stock" />
-         <TableColumn prefWidth="76.0" text="Price" />
+       <TableColumn fx:id="nameColumn" prefWidth="213.33328247070312" text="Name" />
+       <TableColumn fx:id="categoryColumn" prefWidth="83.33331298828125" text="Category" />
+         <TableColumn fx:id="brandColumn" prefWidth="70.6666259765625" text="Brand" />
+         <TableColumn fx:id="variantColumn" prefWidth="102.66668701171875" text="Variant" />
+         <TableColumn fx:id="quantityColumn" prefWidth="38.0" text="Stock" />
+         <TableColumn fx:id="priceColumn" prefWidth="76.0" text="Price" />
      </columns>
    </TableView>
 </AnchorPane>

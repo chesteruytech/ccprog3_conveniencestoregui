@@ -6,7 +6,6 @@ import javafx.scene.control.Label;
 
 public class EmployeeController {
     private Employee model;
-    @FXML Label employeeNameLabel;
 
     public String getEmployeeName() {
         return model.getName();
@@ -22,9 +21,5 @@ public class EmployeeController {
 
     public void setStockInventory(ArrayList<Product> stockInventory) {
         model.setStockInventory(stockInventory);
-    }
-
-    public void displayName(String username){
-        employeeNameLabel.setText("Welcome back to U&P, " + username + "!");
     }
 }

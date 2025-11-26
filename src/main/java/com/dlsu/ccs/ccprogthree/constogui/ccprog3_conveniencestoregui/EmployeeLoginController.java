@@ -20,7 +20,7 @@ public class EmployeeLoginController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("EmployeeGUI.fxml"));
         Parent root = loader.load();
 
-        EmployeeController controller = loader.getController();
+        ManagementController controller = loader.getController();
         controller.displayName(employeeName);
 
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();

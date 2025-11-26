@@ -5,8 +5,8 @@ public class Product {
     protected String category;
     private String brand;
     private String variant;
-    private float price;
     private int quantity;
+    private float price;
 
     public Product(String name, String category, String brand, String variant, int quantity, float price) {
         this.name = name;

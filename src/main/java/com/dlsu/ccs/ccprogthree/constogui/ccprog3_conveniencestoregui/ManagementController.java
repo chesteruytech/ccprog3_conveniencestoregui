@@ -9,48 +9,74 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.GridPane;
 
-public class ProductController implements Initializable {
+public class ManagementController implements Initializable {
     @FXML private TableView<Product> editableProductTable;
-    @FXML private TableColumn<Product, String> name;
-    @FXML private TableColumn<Product, String> category;
-    @FXML private TableColumn<Product, String> brand;
-    @FXML private TableColumn<Product, String> variant;
-    @FXML private TableColumn<Product, Integer> quantity;
-    @FXML private TableColumn<Product, Float> price;
+    @FXML private TableColumn<Product, String> nameColumn;
+    @FXML private TableColumn<Product, String> categoryColumn;
+    @FXML private TableColumn<Product, String> brandColumn;
+    @FXML private TableColumn<Product, String> variantColumn;
+    @FXML private TableColumn<Product, Integer> quantityColumn;
+    @FXML private TableColumn<Product, Float> priceColumn;
 
     // initializes the list of products
-    ObservableList<Product> productList = FXCollections.observableArrayList(
-            new Product("CLoud9Classic", "Food","Cloud9", "Classic", 10, 10.55f),
-            new Product("VcutBarbeque", "Food", "Vcut", "Barbeque", 10, 18.70f),
-            new Product("VcutCheese", "Food", "Vcut", "Cheese", 10, 18.70f),
-            new Product("PiattosSourCream", "Food", "Piattos", "SourCream", 10, 16.31f),
-            new Product("PiattosCheese", "Food", "Piattos", "Cheese", 10, 16.31f),
-            new Product("C2Red", "Beverages", "C2", "Red", 10, 26.50f),
-            new Product("C2Yellow", "Beverages", "C2", "Yellow", 10, 26.50f),
-            new Product("CokeRegular", "Beverages", "Coke", "Regular", 10, 28.50f),
-            new Product("CokeZero", "Beverages", "Coke", "Zero", 10, 28.50f),
-            new Product("RoyalClassic", "Beverages", "Royal", "Classic", 10, 27.25f),
-            new Product("ColgateTripleAction", "Toiletries", "Colgate", "TripleAction", 10, 76.50f),
-            new Product("ColgateAntiCavity", "Toiletries", "Colgate", "AntiCavity", 10, 76.50f),
-            new Product("SafeguardPureWhite", "Toiletries", "Safeguard", "PureWhite", 10, 50.25f),
-            new Product("SafeguardLemon", "Toiletries", "Safeguard", "Lemon", 10, 50.25f),
-            new Product("OldSpiceOriginal", "Toiletries", "OldSpice", "Original", 10, 243.00f),
-            new Product("GreenCrossAlcoholClassic", "Cleaning", "GreenCross", "AlcoholClassic", 10, 65.75f),
-            new Product("TideDetergent", "Cleaning", "Tide", "Detergent", 10, 262.50f),
-            new Product("TideBar", "Cleaning", "Tide", "Bar", 10, 14.70f),
-            new Product("ScotchBriteYellow", "Cleaning", "ScotchBrite", "Yellow", 10, 71.50f),
-            new Product("ScotchBriteBlue", "Cleaning", "ScotchBrite", "Blue", 10, 71.50f),
-            new Product("TempraForte", "Medicine", "Tempra", "Forte", 10, 12.50f),
-            new Product("SolmuxCapsule", "Medicine", "Solmux", "Capsule", 10, 11.25f),
-            new Product("DolfenalTablet", "Medicine", "Dolfenal", "Tablet", 10, 15.00f),
-            new Product("DecolgenNonDrowsy", "Medicine", "Decolgen", "NonDrowsyTablet", 10, 13.15f),
-            new Product("Trimox", "Medicine", "Trimox", "Tablet", 10, 28.35f)
-    );
+//    ObservableList<Product> productList = FXCollections.observableArrayList(
+//            new Product("C2Yellow", "Beverages", "C2", "Yellow", 10, 26.50f),
+//            new Product("CokeRegular", "Beverages", "Coke", "Regular", 10, 28.50f),
+//            new Product("CokeZero", "Beverages", "Coke", "Zero", 10, 28.50f),
+//            new Product("RoyalClassic", "Beverages", "Royal", "Classic", 10, 27.25f),
+//            new Product("ColgateTripleAction", "Toiletries", "Colgate", "TripleAction", 10, 76.50f),
+//            new Product("ColgateAntiCavity", "Toiletries", "Colgate", "AntiCavity", 10, 76.50f),
+//            new Product("SafeguardPureWhite", "Toiletries", "Safeguard", "PureWhite", 10, 50.25f),
+//            new Product("SafeguardLemon", "Toiletries", "Safeguard", "Lemon", 10, 50.25f),
+//            new Product("OldSpiceOriginal", "Toiletries", "OldSpice", "Original", 10, 243.00f),
+//            new Product("GreenCrossAlcoholClassic", "Cleaning", "GreenCross", "AlcoholClassic", 10, 65.75f),
+//            new Product("TideDetergent", "Cleaning", "Tide", "Detergent", 10, 262.50f),
+//            new Product("TideBar", "Cleaning", "Tide", "Bar", 10, 14.70f),
+//            new Product("ScotchBriteYellow", "Cleaning", "ScotchBrite", "Yellow", 10, 71.50f),
+//            new Product("ScotchBriteBlue", "Cleaning", "ScotchBrite", "Blue", 10, 71.50f),
+//            new Product("TempraForte", "Medicine", "Tempra", "Forte", 10, 12.50f),
+//            new Product("SolmuxCapsule", "Medicine", "Solmux", "Capsule", 10, 11.25f),
+//            new Product("DolfenalTablet", "Medicine", "Dolfenal", "Tablet", 10, 15.00f),
+//            new Product("DecolgenNonDrowsy", "Medicine", "Decolgen", "NonDrowsyTablet", 10, 13.15f),
+//            new Product("Trimox", "Medicine", "Trimox", "Tablet", 10, 28.35f)
+//    );
+
+    public ObservableList<Product> getProductList(){
+        ObservableList<Product> productList = FXCollections.observableArrayList();
+        productList.add(new Product("CLoud9Classic", "Food","Cloud9", "Classic", 10, 10.55f));
+        productList.add(new Product("VcutBarbeque", "Food", "Vcut", "Barbeque", 10, 18.70f));
+        productList.add(new Product("VcutCheese", "Food", "Vcut", "Cheese", 10, 18.70f));
+        productList.add(new Product("PiattosSourCream", "Food", "Piattos", "SourCream", 10, 16.31f));
+        productList.add(new Product("PiattosCheese", "Food", "Piattos", "Cheese", 10, 16.31f));
+        productList.add(new Product("C2Red", "Beverages", "C2", "Red", 10, 26.50f));
+        productList.add(new Product("C2Yellow", "Beverages", "C2", "Yellow", 10, 26.50f));
+        productList.add(new Product("CokeRegular", "Beverages", "Coke", "Regular", 10, 28.50f));
+        productList.add(new Product("CokeZero", "Beverages", "Coke", "Zero", 10, 28.50f));
+        productList.add(new Product("RoyalClassic", "Beverages", "Royal", "Classic", 10, 27.25f));
+        productList.add(new Product("ColgateTripleAction", "Toiletries", "Colgate", "TripleAction", 10, 76.50f));
+        productList.add(new Product("ColgateAntiCavity", "Toiletries", "Colgate", "AntiCavity", 10, 76.50f));
+        productList.add(new Product("SafeguardPureWhite", "Toiletries", "Safeguard", "PureWhite", 10, 50.25f));
+        productList.add(new Product("SafeguardLemon", "Toiletries", "Safeguard", "Lemon", 10, 50.25f));
+        productList.add(new Product("OldSpiceOriginal", "Toiletries", "OldSpice", "Original", 10, 243.00f));
+        productList.add(new Product("GreenCrossAlcoholClassic", "Cleaning", "GreenCross", "AlcoholClassic", 10, 65.75f));
+        productList.add(new Product("TideDetergent", "Cleaning", "Tide", "Detergent", 10, 262.50f));
+        productList.add(new Product("TideBar", "Cleaning", "Tide", "Bar", 10, 14.70f));
+        productList.add(new Product("ScotchBriteYellow", "Cleaning", "ScotchBrite", "Yellow", 10, 71.50f));
+        productList.add(new Product("ScotchBriteBlue", "Cleaning", "ScotchBrite", "Blue", 10, 71.50f));
+        productList.add(new Product("TempraForte", "Medicine", "Tempra", "Forte", 10, 12.50f));
+        productList.add(new Product("SolmuxCapsule", "Medicine", "Solmux", "Capsule", 10, 11.25f));
+        productList.add(new Product("DolfenalTablet", "Medicine", "Dolfenal", "Tablet", 10, 15.00f));
+        productList.add(new Product("DecolgenNonDrowsy", "Medicine", "Decolgen", "NonDrowsyTablet", 10, 13.15f));
+        productList.add(new Product("Trimox", "Medicine", "Trimox", "Tablet", 10, 28.35f));
+
+        return productList;
+    }
 
     // Add button
     public void add(){
-        Product product = new Product(name.getText(), category.getText(), brand.getText(), variant.getText(),
-                Integer.parseInt(quantity.getText()), Float.parseFloat(price.getText()));
+        Product product = new Product(nameColumn.getText(), categoryColumn.getText(), brandColumn.getText(),
+                variantColumn.getText(), Integer.parseInt(quantityColumn.getText()),
+                Float.parseFloat(priceColumn.getText()));
 
         Dialog<Product> addDialog = new Dialog<>();
         addDialog.setTitle("Add Product");
@@ -189,7 +215,7 @@ public class ProductController implements Initializable {
         dialog.setContentText("Value:");
         Optional<String> result = dialog.showAndWait();
         result.ifPresent((item)->{
-            ProductController controller = new ProductController();
+            ManagementController controller = new ManagementController();
 
             switch(item){
                 case "Name":
@@ -223,13 +249,18 @@ public class ProductController implements Initializable {
     // Initializes the table data into the array
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        name.setCellValueFactory(new PropertyValueFactory<>("Name"));
-        category.setCellValueFactory(new PropertyValueFactory<>("Category"));
-        brand.setCellValueFactory(new PropertyValueFactory<>("Brand"));
-        variant.setCellValueFactory(new PropertyValueFactory<>("Variant"));
-        quantity.setCellValueFactory(new PropertyValueFactory<>("Stock"));
-        price.setCellValueFactory(new PropertyValueFactory<>("Price"));
+        nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        categoryColumn.setCellValueFactory(new PropertyValueFactory<>("category"));
+        brandColumn.setCellValueFactory(new PropertyValueFactory<>("brand"));
+        variantColumn.setCellValueFactory(new PropertyValueFactory<>("variant"));
+        quantityColumn.setCellValueFactory(new PropertyValueFactory<>("stock"));
+        priceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
 
-        editableProductTable.setItems(productList);
+        editableProductTable.setItems(getProductList());
+    }
+
+    public void displayName(String username){
+        Label employeeNameLabel = new Label(username);
+        employeeNameLabel.setText("Welcome back to U&P, " + username + "!");
     }
 }

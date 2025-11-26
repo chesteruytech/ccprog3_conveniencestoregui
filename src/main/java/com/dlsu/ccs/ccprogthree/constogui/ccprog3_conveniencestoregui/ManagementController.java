@@ -19,65 +19,64 @@ public class ManagementController implements Initializable {
     @FXML private TableColumn<Product, Float> priceColumn;
 
     // initializes the list of products
-//    ObservableList<Product> productList = FXCollections.observableArrayList(
-//            new Product("C2Yellow", "Beverages", "C2", "Yellow", 10, 26.50f),
-//            new Product("CokeRegular", "Beverages", "Coke", "Regular", 10, 28.50f),
-//            new Product("CokeZero", "Beverages", "Coke", "Zero", 10, 28.50f),
-//            new Product("RoyalClassic", "Beverages", "Royal", "Classic", 10, 27.25f),
-//            new Product("ColgateTripleAction", "Toiletries", "Colgate", "TripleAction", 10, 76.50f),
-//            new Product("ColgateAntiCavity", "Toiletries", "Colgate", "AntiCavity", 10, 76.50f),
-//            new Product("SafeguardPureWhite", "Toiletries", "Safeguard", "PureWhite", 10, 50.25f),
-//            new Product("SafeguardLemon", "Toiletries", "Safeguard", "Lemon", 10, 50.25f),
-//            new Product("OldSpiceOriginal", "Toiletries", "OldSpice", "Original", 10, 243.00f),
-//            new Product("GreenCrossAlcoholClassic", "Cleaning", "GreenCross", "AlcoholClassic", 10, 65.75f),
-//            new Product("TideDetergent", "Cleaning", "Tide", "Detergent", 10, 262.50f),
-//            new Product("TideBar", "Cleaning", "Tide", "Bar", 10, 14.70f),
-//            new Product("ScotchBriteYellow", "Cleaning", "ScotchBrite", "Yellow", 10, 71.50f),
-//            new Product("ScotchBriteBlue", "Cleaning", "ScotchBrite", "Blue", 10, 71.50f),
-//            new Product("TempraForte", "Medicine", "Tempra", "Forte", 10, 12.50f),
-//            new Product("SolmuxCapsule", "Medicine", "Solmux", "Capsule", 10, 11.25f),
-//            new Product("DolfenalTablet", "Medicine", "Dolfenal", "Tablet", 10, 15.00f),
-//            new Product("DecolgenNonDrowsy", "Medicine", "Decolgen", "NonDrowsyTablet", 10, 13.15f),
-//            new Product("Trimox", "Medicine", "Trimox", "Tablet", 10, 28.35f)
-//    );
-
     public ObservableList<Product> getProductList(){
         ObservableList<Product> productList = FXCollections.observableArrayList();
-        productList.add(new Product("CLoud9Classic", "Food","Cloud9", "Classic", 10, 10.55f));
-        productList.add(new Product("VcutBarbeque", "Food", "Vcut", "Barbeque", 10, 18.70f));
-        productList.add(new Product("VcutCheese", "Food", "Vcut", "Cheese", 10, 18.70f));
-        productList.add(new Product("PiattosSourCream", "Food", "Piattos", "SourCream", 10, 16.31f));
-        productList.add(new Product("PiattosCheese", "Food", "Piattos", "Cheese", 10, 16.31f));
-        productList.add(new Product("C2Red", "Beverages", "C2", "Red", 10, 26.50f));
-        productList.add(new Product("C2Yellow", "Beverages", "C2", "Yellow", 10, 26.50f));
-        productList.add(new Product("CokeRegular", "Beverages", "Coke", "Regular", 10, 28.50f));
-        productList.add(new Product("CokeZero", "Beverages", "Coke", "Zero", 10, 28.50f));
-        productList.add(new Product("RoyalClassic", "Beverages", "Royal", "Classic", 10, 27.25f));
-        productList.add(new Product("ColgateTripleAction", "Toiletries", "Colgate", "TripleAction", 10, 76.50f));
-        productList.add(new Product("ColgateAntiCavity", "Toiletries", "Colgate", "AntiCavity", 10, 76.50f));
-        productList.add(new Product("SafeguardPureWhite", "Toiletries", "Safeguard", "PureWhite", 10, 50.25f));
-        productList.add(new Product("SafeguardLemon", "Toiletries", "Safeguard", "Lemon", 10, 50.25f));
-        productList.add(new Product("OldSpiceOriginal", "Toiletries", "OldSpice", "Original", 10, 243.00f));
-        productList.add(new Product("GreenCrossAlcoholClassic", "Cleaning", "GreenCross", "AlcoholClassic", 10, 65.75f));
-        productList.add(new Product("TideDetergent", "Cleaning", "Tide", "Detergent", 10, 262.50f));
-        productList.add(new Product("TideBar", "Cleaning", "Tide", "Bar", 10, 14.70f));
-        productList.add(new Product("ScotchBriteYellow", "Cleaning", "ScotchBrite", "Yellow", 10, 71.50f));
-        productList.add(new Product("ScotchBriteBlue", "Cleaning", "ScotchBrite", "Blue", 10, 71.50f));
-        productList.add(new Product("TempraForte", "Medicine", "Tempra", "Forte", 10, 12.50f));
-        productList.add(new Product("SolmuxCapsule", "Medicine", "Solmux", "Capsule", 10, 11.25f));
-        productList.add(new Product("DolfenalTablet", "Medicine", "Dolfenal", "Tablet", 10, 15.00f));
-        productList.add(new Product("DecolgenNonDrowsy", "Medicine", "Decolgen", "NonDrowsyTablet", 10, 13.15f));
-        productList.add(new Product("Trimox", "Medicine", "Trimox", "Tablet", 10, 28.35f));
+        productList.add(new Product("CLoud9Classic", "Food","Cloud9", "Classic", 10
+                , 10.55f));
+        productList.add(new Product("VcutBarbeque", "Food", "Vcut", "Barbeque", 10,
+                18.70f));
+        productList.add(new Product("VcutCheese", "Food", "Vcut", "Cheese", 10,
+                18.70f));
+        productList.add(new Product("PiattosSourCream", "Food", "Piattos", "SourCream",
+                10, 16.31f));
+        productList.add(new Product("PiattosCheese", "Food", "Piattos", "Cheese",
+                10, 16.31f));
+        productList.add(new Product("C2Red", "Beverages", "C2", "Red", 10,
+                26.50f));
+        productList.add(new Product("C2Yellow", "Beverages", "C2", "Yellow", 10,
+                26.50f));
+        productList.add(new Product("CokeRegular", "Beverages", "Coke", "Regular",
+                10, 28.50f));
+        productList.add(new Product("CokeZero", "Beverages", "Coke", "Zero", 10,
+                28.50f));
+        productList.add(new Product("RoyalClassic", "Beverages", "Royal", "Classic",
+                10, 27.25f));
+        productList.add(new Product("ColgateTripleAction", "Toiletries", "Colgate",
+                "TripleAction", 10, 76.50f));
+        productList.add(new Product("ColgateAntiCavity", "Toiletries", "Colgate",
+                "AntiCavity", 10, 76.50f));
+        productList.add(new Product("SafeguardPureWhite", "Toiletries", "Safeguard",
+                "PureWhite", 10, 50.25f));
+        productList.add(new Product("SafeguardLemon", "Toiletries", "Safeguard", "Lemon",
+                10, 50.25f));
+        productList.add(new Product("OldSpiceOriginal", "Toiletries", "OldSpice",
+                "Original", 10, 243.00f));
+        productList.add(new Product("GreenCrossAlcoholClassic", "Cleaning", "GreenCross",
+                "AlcoholClassic", 10, 65.75f));
+        productList.add(new Product("TideDetergent", "Cleaning", "Tide", "Detergent",
+                10, 262.50f));
+        productList.add(new Product("TideBar", "Cleaning", "Tide", "Bar", 10,
+                14.70f));
+        productList.add(new Product("ScotchBriteYellow", "Cleaning", "ScotchBrite",
+                "Yellow", 10, 71.50f));
+        productList.add(new Product("ScotchBriteBlue", "Cleaning", "ScotchBrite", "Blue",
+                10, 71.50f));
+        productList.add(new Product("TempraForte", "Medicine", "Tempra", "Forte",
+                10, 12.50f));
+        productList.add(new Product("SolmuxCapsule", "Medicine", "Solmux", "Capsule",
+                10, 11.25f));
+        productList.add(new Product("DolfenalTablet", "Medicine", "Dolfenal", "Tablet",
+                10, 15.00f));
+        productList.add(new Product("DecolgenNonDrowsy", "Medicine", "Decolgen", "NonDrowsyTablet",
+                10, 13.15f));
+        productList.add(new Product("Trimox", "Medicine", "Trimox", "Tablet", 10,
+                28.35f));
 
         return productList;
     }
 
     // Add button
     public void add(){
-        Product product = new Product(nameColumn.getText(), categoryColumn.getText(), brandColumn.getText(),
-                variantColumn.getText(), Integer.parseInt(quantityColumn.getText()),
-                Float.parseFloat(priceColumn.getText()));
-
         Dialog<Product> addDialog = new Dialog<>();
         addDialog.setTitle("Add Product");
         addDialog.setHeaderText("Please enter the required product details");
@@ -103,15 +102,15 @@ public class ManagementController implements Initializable {
         grid.add(new Label("Name:"), 0, 0);
         grid.add(productName, 1,0);
         grid.add(new Label("Category"), 0, 1);
-        grid.add(productName, 1,1);
+        grid.add(productCategory, 1,1);
         grid.add(new Label("Brand"), 0, 2);
-        grid.add(productName, 1,2);
+        grid.add(productBrand, 1,2);
         grid.add(new Label("Variant"), 0, 3);
-        grid.add(productName, 1,3);
+        grid.add(productVariant, 1,3);
         grid.add(new Label("Quantity"), 0, 4);
-        grid.add(productName, 1,4);
+        grid.add(productQuantity, 1,4);
         grid.add(new Label("Price"), 0, 5);
-        grid.add(productName, 1,5);
+        grid.add(productPrice, 1,5);
 
         ButtonType addButtonType = new ButtonType("Add", ButtonBar.ButtonData.OK_DONE);
         addDialog.getDialogPane().getButtonTypes().addAll(addButtonType, ButtonType.CANCEL);
@@ -124,14 +123,20 @@ public class ManagementController implements Initializable {
             } return null;
         });
 
+        Optional<Product> result = addDialog.showAndWait();
+        if (result.isPresent()) {
+            productName.setText(result.get().getName());
+            productCategory.setText(result.get().getCategory());
+            productBrand.setText(result.get().getBrand());
+            productVariant.setText(result.get().getVariant());
+            productQuantity.setText(String.valueOf(result.get().getQuantity()));
+            productPrice.setText(String.valueOf(result.get().getPrice()));
+        }
         ObservableList<Product> products = editableProductTable.getItems();
-        products.add(product);
         editableProductTable.setItems(products);
     }
 
     public void modifyNameEvent() {
-        Product productSelected = editableProductTable.getSelectionModel().getSelectedItem();
-
         TextInputDialog modifyNameDialog = new TextInputDialog();
         modifyNameDialog.setTitle("Change Name");
         modifyNameDialog.setHeaderText("Please enter new product name you would like to change");
@@ -139,12 +144,10 @@ public class ManagementController implements Initializable {
 
         Optional<String> nameResult = modifyNameDialog.showAndWait();
 
-        nameResult.ifPresent(productSelected::setName);
+        nameResult.ifPresent(nameColumn::setText);
     }
 
     public void modifyCategoryEvent() {
-        Product productSelected = editableProductTable.getSelectionModel().getSelectedItem();
-
         TextInputDialog modifyCategoryDialog = new TextInputDialog();
         modifyCategoryDialog.setTitle("Change Category");
         modifyCategoryDialog.setHeaderText("Please enter new product category you would like to change");
@@ -152,12 +155,10 @@ public class ManagementController implements Initializable {
 
         Optional<String> categoryResult = modifyCategoryDialog.showAndWait();
 
-        categoryResult.ifPresent(productSelected::setCategory);
+        categoryResult.ifPresent(categoryColumn::setText);
     }
 
     public void modifyBrandEvent() {
-        Product productSelected = editableProductTable.getSelectionModel().getSelectedItem();
-
         TextInputDialog modifyBrandDialog = new TextInputDialog();
         modifyBrandDialog.setTitle("Change Brand");
         modifyBrandDialog.setHeaderText("Please enter new product brand you would like to change");
@@ -165,12 +166,10 @@ public class ManagementController implements Initializable {
 
         Optional<String> brandResult = modifyBrandDialog.showAndWait();
 
-        brandResult.ifPresent(productSelected::setBrand);
+        brandResult.ifPresent(brandColumn::setText);
     }
 
     public void modifyVariantEvent() {
-        Product productSelected = editableProductTable.getSelectionModel().getSelectedItem();
-
         TextInputDialog modifyVariantDialog = new TextInputDialog();
         modifyVariantDialog.setTitle("Change Variant");
         modifyVariantDialog.setHeaderText("Please enter new product variant you would like to change");
@@ -178,11 +177,10 @@ public class ManagementController implements Initializable {
 
         Optional<String> variantResult = modifyVariantDialog.showAndWait();
 
-        variantResult.ifPresent(productSelected::setVariant);
+        variantResult.ifPresent(variantColumn::setText);
     }
 
     public void modifyStockEvent() {
-        Product productSelected = editableProductTable.getSelectionModel().getSelectedItem();
 
         TextInputDialog modifyQuantityDialog = new TextInputDialog();
         modifyQuantityDialog.setTitle("Change Stock");
@@ -191,12 +189,10 @@ public class ManagementController implements Initializable {
 
         Optional<String> stockResult = modifyQuantityDialog.showAndWait();
 
-        stockResult.ifPresent(s -> productSelected.setQuantity(Integer.parseInt(s)));
+        stockResult.ifPresent(s -> quantityColumn.setText(s));
     }
 
     public void modifyPriceEvent() {
-        Product productSelected = editableProductTable.getSelectionModel().getSelectedItem();
-
         TextInputDialog modifyPriceDialog = new TextInputDialog();
         modifyPriceDialog.setTitle("Change Price");
         modifyPriceDialog.setHeaderText("Update product price you would like to change");
@@ -204,7 +200,7 @@ public class ManagementController implements Initializable {
 
         Optional<String> priceResult = modifyPriceDialog.showAndWait();
 
-        priceResult.ifPresent(s -> productSelected.setPrice(Float.parseFloat(s)));
+        priceResult.ifPresent(s -> priceColumn.setText(s));
     }
 
     // Modify button and pick a choice where value should be modified

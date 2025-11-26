@@ -1,29 +1,59 @@
 package com.dlsu.ccs.ccprogthree.constogui.ccprog3_conveniencestoregui;
 
-import java.util.ArrayList;
+import java.io.IOException;
+import javafx.event.ActionEvent;
+import javafx.fxml.*;
+import javafx.scene.*;
+import javafx.stage.Stage;
 
 public class ShelfController {
-    private Shelf model;
-    private ShelfView view;
+    private Parent root;
+    private Stage stage;
 
-    public ShelfController(Shelf model, ShelfView view) {
-        this.model = model;
-        this.view = view;
+    // Customer Button; open to everyone
+    public void food(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("FoodGUI.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene (root));
+        stage.show();
     }
 
-    public int getShelfNumber() {
-        return model.getNumber();
+    // Employee Button; restricted to employees
+    public void beverages(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("BeveragesGUI.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene (root));
+        stage.show();
     }
 
-    public ArrayList<Product> getProductsInShelf() {
-        return model.getProducts();
+    // Closes the application
+    public void toiletries(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("ToiletriesGUI.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene (root));
+        stage.show();
     }
 
-    public void setProductsToShelf(ArrayList<Product> products) {
-        model.setProducts(products);
+    // Customer Button; open to everyone
+    public void cleaningProducts(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("CleaningProductsGUI.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene (root));
+        stage.show();
     }
 
-    public void updateShelfView() {
-        view.showProducts();
+    // Employee Button; restricted to employees
+    public void medicine(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("MedicineGUI.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene (root));
+        stage.show();
+    }
+
+    public void backToMain(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene (root));
+        stage.show();
     }
 }

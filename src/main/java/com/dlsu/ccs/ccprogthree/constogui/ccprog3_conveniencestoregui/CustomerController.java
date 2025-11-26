@@ -38,6 +38,6 @@ public class CustomerController {
     }
 
     public void updateCustomerView(){
-        view.showEmployeeDetails(model.getName(), model.getAge(), model.getMembership(), model.getMoney());
+        view.showCustomerDetails(model.getName(), model.getAge(), model.getMembership(), model.getMoney());
     }
 }

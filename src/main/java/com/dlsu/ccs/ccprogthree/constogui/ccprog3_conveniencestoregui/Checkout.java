@@ -43,7 +43,7 @@ public class Checkout {
         return 0;
     }
 
-    public Receipt printReceipt(){
-//        return new Receipt(customer.getAllProducts(), CalculateTotal(), amount_given, giveChange());
-    }
+//    public Receipt printReceipt(){
+////        return new Receipt(customer.getAllProducts(), CalculateTotal(), amount_given, giveChange());
+//    }
 }

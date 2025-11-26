@@ -5,8 +5,10 @@ import java.util.*;
 import javafx.collections.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.*;
+import javafx.geometry.Insets;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.GridPane;
 
 public class ProductController implements Initializable {
     @FXML
@@ -51,6 +53,61 @@ public class ProductController implements Initializable {
             new Product("DecolgenNonDrowsy", "Medicine", "Decolgen", "NonDrowsyTablet", 10, 13.15f),
             new Product("Trimox", "Medicine", "Trimox", "Tablet", 10, 28.35f)
     );
+
+    public void add(){
+        Product product = new Product(name.getText(), category.getText(), brand.getText(), variant.getText(),
+                Integer.parseInt(quantity.getText()), Float.parseFloat(price.getText()));
+
+        Dialog<Product> addDialog = new Dialog<>();
+        addDialog.setTitle("Add Product");
+        addDialog.setHeaderText("Please enter the required product details");
+
+        GridPane grid = new GridPane();
+        grid.setHgap(10);
+        grid.setVgap(10);
+        grid.setPadding(new Insets(20, 150, 10,10));
+
+        TextField productName = new TextField();
+        productName.setPromptText("Name");
+        TextField productCategory = new TextField();
+        productCategory.setPromptText("Category");
+        TextField productBrand = new TextField();
+        productBrand.setPromptText("Brand");
+        TextField productVariant = new TextField();
+        productVariant.setPromptText("Variant");
+        TextField productQuantity = new TextField();
+        productQuantity.setPromptText("Quantity");
+        TextField productPrice = new TextField();
+        productPrice.setPromptText("Price");
+
+        grid.add(new Label("Name:"), 0, 0);
+        grid.add(productName, 1,0);
+        grid.add(new Label("Category"), 0, 1);
+        grid.add(productName, 1,1);
+        grid.add(new Label("Brand"), 0, 2);
+        grid.add(productName, 1,2);
+        grid.add(new Label("Variant"), 0, 3);
+        grid.add(productName, 1,3);
+        grid.add(new Label("Quantity"), 0, 4);
+        grid.add(productName, 1,4);
+        grid.add(new Label("Price"), 0, 5);
+        grid.add(productName, 1,5);
+
+        ButtonType addButtonType = new ButtonType("Add", ButtonBar.ButtonData.OK_DONE);
+        addDialog.getDialogPane().getButtonTypes().addAll(addButtonType, ButtonType.CANCEL);
+
+        addDialog.getDialogPane().setContent(grid);
+
+        addDialog.setResultConverter(dialogButton -> {
+            if (dialogButton == addButtonType) {
+                return new Product(productName.getText(), productCategory.getText(), productBrand.getText(), productVariant.getText(), Integer.parseInt(productQuantity.getText()), Float.parseFloat(productPrice.getText()));
+            } return null;
+        });
+
+        ObservableList<Product> products = editableProductTable.getItems();
+        products.add(product);
+        editableProductTable.setItems(products);
+    }
 
     public void modifyNameEvent(TableColumn.CellEditEvent modifyCell) {
         Product productSelected = editableProductTable.getSelectionModel().getSelectedItem();

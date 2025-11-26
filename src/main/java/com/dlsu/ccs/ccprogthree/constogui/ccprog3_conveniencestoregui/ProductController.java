@@ -139,7 +139,7 @@ public class ProductController implements Initializable {
         productSelected.setPrice(modifyCell.getNewValue().hashCode());
     }
 
-    public void modify(ActionEvent event) {
+    public void modify() {
         String[] options = {"Name", "Category", "Brand", "Variant", "Stock", "Price"};
         String defaultValue = options[0];
 
@@ -167,7 +167,7 @@ public class ProductController implements Initializable {
         });
     }
 
-    public void remove(ActionEvent event) {
+    public void remove() {
         int selectedProduct = editableProductTable.getSelectionModel().getSelectedIndex();
         editableProductTable.getItems().remove(selectedProduct);
     }

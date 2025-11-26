@@ -253,7 +253,7 @@ public class ManagementController implements Initializable {
         categoryColumn.setCellValueFactory(new PropertyValueFactory<>("category"));
         brandColumn.setCellValueFactory(new PropertyValueFactory<>("brand"));
         variantColumn.setCellValueFactory(new PropertyValueFactory<>("variant"));
-        quantityColumn.setCellValueFactory(new PropertyValueFactory<>("stock"));
+        quantityColumn.setCellValueFactory(new PropertyValueFactory<>("quantity"));
         priceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
 
         editableProductTable.setItems(getProductList());

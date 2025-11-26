@@ -27,50 +27,6 @@ public class Employee {
         this.stockInventory = stockInventory;
     }
 
-    public static void addProduct(){
-        Scanner createProduct = new Scanner(System.in);
-
-        System.out.print("Product name: ");
-        String productName = createProduct.nextLine();
-        System.out.print("Category: ");
-        String productCategory = createProduct.nextLine();
-        System.out.print("Brand: ");
-        String productBrand = createProduct.nextLine();
-        System.out.print("Variant: ");
-        String productVariant = createProduct.nextLine();
-        System.out.print("Quantity: ");
-        int productQuantity = createProduct.nextInt();
-        System.out.print("Price: ");
-        float productPrice = createProduct.nextFloat();
-
-        ArrayList<Product> stockInventory = new ArrayList<>();
-        stockInventory.add(new Product(productName, productCategory, productBrand, productVariant, productQuantity, productPrice));
-
-        if(stockInventory.contains(new Product(productName, productCategory, productBrand, productVariant, productQuantity, productPrice)))
-            System.out.println("Product already exists\n");
-        else
-            System.out.println("Product added successfully\n");
-    }
-
-    public void changeProduct(Product product){
-        Scanner updateProduct = new Scanner(System.in);
-
-        System.out.print("Product name: ");
-        String productName = updateProduct.nextLine();
-        System.out.print("Category: ");
-        String productCategory = updateProduct.nextLine();
-        System.out.print("Brand: ");
-        String productBrand = updateProduct.nextLine();
-        System.out.print("Variant: ");
-        String productVariant = updateProduct.nextLine();
-        System.out.print("Quantity: ");
-        int productQuantity = updateProduct.nextInt();
-        System.out.print("Price: ");
-        float productPrice = updateProduct.nextFloat();
-
-        product.setValues(productName, productBrand, productVariant, productQuantity, productPrice);
-    }
-
     public void categorizeToFood(int index){
         Food foodHolder = new Food(stockInventory.get(index).getName(), stockInventory.get(index).getCategory(), stockInventory.get(index).getBrand(), stockInventory.get(index).getVariant(), stockInventory.get(index).getQuantity(), stockInventory.get(index).getPrice());
         stockInventory.set(index, foodHolder);

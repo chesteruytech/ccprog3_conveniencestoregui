@@ -17,7 +17,7 @@ public class EmployeeLoginController {
     public void validateEmployee(ActionEvent event) throws IOException {
         String employeeName = employeeNameTextField.getText();
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Employee.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("EmployeeGUI.fxml"));
         Parent root = loader.load();
 
         EmployeeController controller = loader.getController();

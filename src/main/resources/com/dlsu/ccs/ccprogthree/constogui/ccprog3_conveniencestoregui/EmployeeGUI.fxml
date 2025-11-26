@@ -48,12 +48,12 @@
    </Label>
    <TableView fx:id="editableProductTable" layoutX="14.0" layoutY="65.0" prefHeight="275.0" prefWidth="580.0">
      <columns>
-       <TableColumn fx:id="nameColumn" prefWidth="213.33328247070312" text="Name" />
-       <TableColumn fx:id="categoryColumn" prefWidth="83.33331298828125" text="Category" />
-         <TableColumn fx:id="brandColumn" prefWidth="70.6666259765625" text="Brand" />
-         <TableColumn fx:id="variantColumn" prefWidth="102.66668701171875" text="Variant" />
-         <TableColumn fx:id="quantityColumn" prefWidth="38.0" text="Stock" />
-         <TableColumn fx:id="priceColumn" prefWidth="76.0" text="Price" />
+       <TableColumn fx:id="nameColumn" prefWidth="146.00003051757812" text="Name" />
+       <TableColumn fx:id="categoryColumn" prefWidth="62.66668701171875" text="Category" />
+         <TableColumn fx:id="brandColumn" prefWidth="128.0" text="Brand" />
+         <TableColumn fx:id="variantColumn" prefWidth="123.3333740234375" text="Variant" />
+         <TableColumn fx:id="quantityColumn" minWidth="0.0" prefWidth="50.66668701171875" text="Stock" />
+         <TableColumn fx:id="priceColumn" minWidth="0.0" prefWidth="76.66668701171875" text="Price" />
      </columns>
    </TableView>
 </AnchorPane>

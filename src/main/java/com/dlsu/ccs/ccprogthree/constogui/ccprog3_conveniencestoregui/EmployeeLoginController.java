@@ -9,10 +9,8 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class EmployeeLoginController {
-    @FXML
-    TextField employeeNameTextField;
-    @FXML
-    Button backButton;
+    @FXML TextField employeeNameTextField;
+    @FXML Button backButton;
 
     public void validateEmployee(ActionEvent event) throws IOException {
         String employeeName = employeeNameTextField.getText();

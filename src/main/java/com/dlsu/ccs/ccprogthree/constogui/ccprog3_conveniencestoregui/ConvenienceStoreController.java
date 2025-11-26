@@ -10,6 +10,7 @@ public class ConvenienceStoreController {
     private Parent root;
     private Stage stage;
 
+    // Customer Button; open to everyone
     public void customer(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("ShelfGUI.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -17,6 +18,7 @@ public class ConvenienceStoreController {
         stage.show();
     }
 
+    // Employee Button; restricted to employees
     public void employee(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("EmployeeLoginGUI.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -24,6 +26,7 @@ public class ConvenienceStoreController {
         stage.show();
     }
 
+    // Closes the application
     public void exit(){
         stage.close();
     }

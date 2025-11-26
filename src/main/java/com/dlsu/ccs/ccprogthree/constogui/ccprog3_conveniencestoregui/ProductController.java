@@ -10,20 +10,13 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.GridPane;
 
 public class ProductController implements Initializable {
-    @FXML
-    private TableView<Product> editableProductTable;
-    @FXML
-    private TableColumn<Product, String> name;
-    @FXML
-    private TableColumn<Product, String> category;
-    @FXML
-    private TableColumn<Product, String> brand;
-    @FXML
-    private TableColumn<Product, String> variant;
-    @FXML
-    private TableColumn<Product, Integer> quantity;
-    @FXML
-    private TableColumn<Product, Float> price;
+    @FXML private TableView<Product> editableProductTable;
+    @FXML private TableColumn<Product, String> name;
+    @FXML private TableColumn<Product, String> category;
+    @FXML private TableColumn<Product, String> brand;
+    @FXML private TableColumn<Product, String> variant;
+    @FXML private TableColumn<Product, Integer> quantity;
+    @FXML private TableColumn<Product, Float> price;
 
     ObservableList<Product> productList = FXCollections.observableArrayList(
             new Product("CLoud9Classic", "Food","Cloud9", "Classic", 10, 10.55f),

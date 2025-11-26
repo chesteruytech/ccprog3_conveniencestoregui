@@ -6,11 +6,11 @@ public class Checkout {
     private float total_cost;
     private float amount_given;
     private Customer customer;
-
+    // Set out the current Customer using the checkout
     public void setCustomer(Customer customer){
         this.customer = customer;
     }
-
+    // Computes the discount based on the customer's age and membership
     public float computeDiscountLogic(){
         if (customer.getAge() >= 60 && customer.getMembership()){  // Senior and Member
             return 0.30f;
@@ -22,7 +22,7 @@ public class Checkout {
             return 0.00f;
         }
     }
-
+    // Calculates the total prices of the products the customer bought
     public float calculateTotal(){
         for(int i = 0; i < customer.getAllProducts().size(); i++){
            total_cost += customer.getAllProducts().get(i).getPrice() * customer.getAllProducts().get(i).getQuantity();
@@ -30,7 +30,7 @@ public class Checkout {
 
         return total_cost - (this.computeDiscountLogic() * total_cost);
     }
-
+    // Calculates the change
     public float giveChange(){
         Scanner iLoveCash = new Scanner(System.in);
 

@@ -31,9 +31,9 @@
    </MenuBar>
    <ButtonBar layoutY="361.0" prefHeight="40.0" prefWidth="600.0">
      <buttons>
-       <Button fx:id="addButton" mnemonicParsing="false" onAction="#add" text="Add" />
-         <Button fx:id="modifyButton" mnemonicParsing="false" onAction="#modify" text="Modify" />
-         <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#remove" text="Delete" />
+       <Button mnemonicParsing="false" onAction="#add" text="Add" />
+         <Button mnemonicParsing="false" onAction="#modify" text="Modify" />
+         <Button mnemonicParsing="false" onAction="#remove" text="Delete" />
          <Text strokeType="OUTSIDE" strokeWidth="0.0" />
      </buttons>
    </ButtonBar>
@@ -42,7 +42,7 @@
          <Font size="10.0" />
       </font>
    </Label>
-   <TableView fx:id="editableProductTable" editable="true" layoutX="14.0" layoutY="65.0" prefHeight="275.0" prefWidth="580.0">
+   <TableView fx:id="editableProductTable" layoutX="14.0" layoutY="65.0" prefHeight="275.0" prefWidth="580.0">
      <columns>
        <TableColumn prefWidth="213.33328247070312" text="Name" />
        <TableColumn prefWidth="83.33331298828125" text="Category" />
